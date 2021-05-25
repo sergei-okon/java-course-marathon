@@ -8,6 +8,20 @@ public class Car {
     public Car() {
     }
 
+    void info() {
+        System.out.println("Это автомобиль");
+    }
+
+    int x;
+
+    int yearDifference(int inputYear) {
+        if (inputYear < age) {
+            System.out.println("Введен неправильный год");
+        } else
+            x = inputYear - age;
+        return x;
+    }
+
     public int getAge() {
         return age;
     }
