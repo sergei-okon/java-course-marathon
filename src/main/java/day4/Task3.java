@@ -56,4 +56,3 @@ public class Task3 {
                 + " Порядковый номер строки " + (maxRowIndex + 1));
     }
 }
-

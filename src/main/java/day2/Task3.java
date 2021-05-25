@@ -21,9 +21,3 @@ public class Task3 {
     }
 }
 
-
-
-
-
-
-
