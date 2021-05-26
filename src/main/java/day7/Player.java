@@ -8,6 +8,10 @@ public class Player {
     public static final int MAX_PLAYER = 6;
 
     void run() {
+        if (stamina == MIN_STAMINA) {
+            System.out.println("Игрок уже выдохся");
+            return;
+        }
         stamina = stamina - 1;
         if (stamina == MIN_STAMINA) {
             System.out.println("Игрок уходит с поля");
@@ -26,11 +30,10 @@ public class Player {
     }
 
     public Player(int stamina) {
-        if (countPlayers == 6) {
-            return;
+        if (countPlayers < MAX_PLAYER) {
+            this.stamina = stamina;
+            countPlayers++;
         }
-        this.stamina = stamina;
-        countPlayers++;
     }
 
     public int getStamina() {

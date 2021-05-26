@@ -25,7 +25,7 @@ public class Task2 {
         int staminaRunPlayer = player2.getStamina();
         for (int i = 0; i < staminaRunPlayer; i++) {
             player2.run();
-            System.out.println(player2.getStamina());
+//            System.out.println(player2.getStamina());
         }
 
         System.out.println("Кол-во игроков на поле " + Player.getCountPlayers());
