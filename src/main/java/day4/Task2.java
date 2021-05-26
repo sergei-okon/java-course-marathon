@@ -6,11 +6,11 @@ import java.util.Random;
 public class Task2 {
     public static void main(String[] args) {
         int[] array = new int[100];
+        Random random = new Random();
 
         for (int i = 0; i < array.length; i++) {
             int min = 0;
             int max = 10000;
-            Random random = new Random();
             int randomNumber = random.nextInt(max - min) + min;
 
             array[i] = randomNumber;
@@ -32,13 +32,9 @@ public class Task2 {
 
             if (array[i] % 10 == 0) {
                 countOfEndsZero++;
-            }
-
-            if (array[i] % 10 == 0) {
                 sumOfEndsZero += array[i];
             }
         }
-
         System.out.println(max);
         System.out.println(min);
         System.out.println(countOfEndsZero);
