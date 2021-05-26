@@ -11,9 +11,8 @@ public class Teacher {
         this.subject = subject;
     }
 
-    String gradeInWords;
-
     void evaluate(Student studentName) {
+        String gradeInWords = null;
         int min = 2;
         int max = 5;
         Random random = new Random();

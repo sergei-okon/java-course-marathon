@@ -12,14 +12,8 @@ public class Car {
         System.out.println("Это автомобиль");
     }
 
-    int x;
-
     int yearDifference(int inputYear) {
-        if (inputYear < age) {
-            System.out.println("Введен неправильный год");
-        } else
-            x = inputYear - age;
-        return x;
+        return Math.abs(inputYear - age);
     }
 
     public int getAge() {
