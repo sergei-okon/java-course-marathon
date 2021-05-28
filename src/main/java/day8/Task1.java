@@ -2,8 +2,8 @@ package day8;
 
 public class Task1 {
     public static void main(String[] args) {
-        String str1 = new String();
-        StringBuilder str2 = new StringBuilder(new String());
+        String str1 = new String("");
+        StringBuilder str2 = new StringBuilder();
 
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 20001; i++) {

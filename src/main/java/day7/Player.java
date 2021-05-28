@@ -12,7 +12,7 @@ public class Player {
             System.out.println("Игрок уже выдохся");
             return;
         }
-        stamina = stamina - 1;
+        stamina --;
         if (stamina == MIN_STAMINA) {
             System.out.println("Игрок уходит с поля");
             countPlayers--;
@@ -30,8 +30,9 @@ public class Player {
     }
 
     public Player(int stamina) {
+        this.stamina = stamina;
+
         if (countPlayers < MAX_PLAYER) {
-            this.stamina = stamina;
             countPlayers++;
         }
     }
