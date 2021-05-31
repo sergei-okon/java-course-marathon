@@ -1,6 +1,9 @@
 package day11.task1;
 
 public class Courier implements Worker {
+    private static final int SALARY_AMOUNT = 100;
+    private static final int BONUS_AMOUNT = 70000;
+    private static final int MIN_ORDERS_FOR_BONUS_PAYMENT = 10000;
     private int salary = 0;
     private boolean isPayed = false;
     private Warehouse warehouse;
@@ -8,20 +11,21 @@ public class Courier implements Worker {
 
     @Override
     public void doWork() {
-        salary = salary + 100;
+        salary = salary + SALARY_AMOUNT;
         warehouse.countDeliveredOrders++;
     }
 
     @Override
     public void bonus() {
-        if (warehouse.getCountDeliveredOrders() < 10000) {
+        if (warehouse.getCountDeliveredOrders() < MIN_ORDERS_FOR_BONUS_PAYMENT) {
             System.out.println("Бонус пока не доступен (курьер)");
+
         } else if (isPayed == true) {
             System.out.println("Бонус уже выплачивался (курьер)");
 
         } else {
             System.out.println("Выплачиваеться бонус сотруднику (курьер)");
-            salary = salary + 70000;
+            salary = salary + BONUS_AMOUNT;
             setPayed(true);
         }
     }

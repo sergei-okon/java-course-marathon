@@ -24,6 +24,7 @@ public class Task1 {
         System.out.println();
         System.out.println("Зарплата сборщика первого склада " + picker1.getSalary());
         System.out.println("Зарплата курьера первого склада " + courier1.getSalary());
+
     }
 
     static void businessProcess(Worker worker) {

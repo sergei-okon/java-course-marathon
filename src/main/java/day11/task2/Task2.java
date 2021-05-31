@@ -26,4 +26,3 @@ public class Task2 {
         warrior1.physicalAttack(magician); //Воин атакует Мага 5 раз
     }
 }
-
