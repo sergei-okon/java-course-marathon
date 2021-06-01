@@ -12,7 +12,7 @@ public class Courier implements Worker {
     @Override
     public void doWork() {
         salary = salary + SALARY_AMOUNT;
-        warehouse.countDeliveredOrders++;
+        warehouse.incrementCountDeliveredOrders();
     }
 
     @Override

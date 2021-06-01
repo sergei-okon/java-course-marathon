@@ -1,8 +1,17 @@
 package day11.task1;
 
 public class Warehouse {
-    public int countPickedOrders = 0;
-    public int countDeliveredOrders = 0;
+    private int countPickedOrders = 0;
+    private int countDeliveredOrders = 0;
+
+
+    public void incrementCountPickedOrders() {
+        countPickedOrders++;
+    }
+
+    public void incrementCountDeliveredOrders() {
+        countDeliveredOrders++;
+    }
 
     public int getCountPickedOrders() {
         return countPickedOrders;
