@@ -1,9 +1,5 @@
 package day12.task4;
 
-import day12.task5.MusicArtist;
-
-import java.lang.reflect.Member;
-import java.util.ArrayList;
 import java.util.List;
 
 public class MusicBand {
@@ -18,17 +14,13 @@ public class MusicBand {
     }
 
     static void transferMembers(MusicBand musicBand1A, MusicBand musicBand1B) {
-        for (String members : musicBand1A.getMembers()) {
-            musicBand1B.getMembers().add(members);
-        }
+        musicBand1B.getMembers().addAll(musicBand1A.getMembers());
         musicBand1A.getMembers().clear();
-        {
-            System.out.println(musicBand1B);
-        }
+        System.out.println(musicBand1B);
     }
 
     public void printMembers() {
-        System.out.println(name+members);
+        System.out.println(name + members);
     }
 
     public List<String> getMembers() {
