@@ -14,6 +14,10 @@ public class User {
     }
 
     public void subscribe(User user) {
+        if (this.isSubscribed(user) == true) {
+            System.out.println("Вы уже подписаны на " + user.getName());
+            return;
+        }
         subscriptions.add(user);
         System.out.println(name + " ПОДПИСАЛСЯ на " + user.name);
     }
