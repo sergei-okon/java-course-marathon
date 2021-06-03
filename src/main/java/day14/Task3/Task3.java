@@ -33,6 +33,8 @@ public class Task3 {
                 }
             }
             System.out.println(personList);
+            return personList;
+
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
             e.printStackTrace();
@@ -41,7 +43,6 @@ public class Task3 {
             System.out.println("Некорректный входной файл");
             e.printStackTrace();
         }
-
         return null;
     }
 }

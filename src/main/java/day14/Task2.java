@@ -14,7 +14,7 @@ public class Task2 {
         parseFileToStringList(file);
     }
 
-    static List<String> parseFileToStringList(File file) {
+    public static List<String> parseFileToStringList(File file) {
         try {
             Scanner scanner = new Scanner(file);
             Scanner scanner1 = new Scanner(file);
@@ -30,6 +30,7 @@ public class Task2 {
                         peopleData.add(scanner1.nextLine());
             }
             System.out.println(peopleData);
+            return peopleData;
 
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
