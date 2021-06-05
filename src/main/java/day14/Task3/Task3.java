@@ -18,16 +18,14 @@ public class Task3 {
         try {
             Scanner scanner = new Scanner(file);
             List<Person> personList = new ArrayList<>();
-            int age;
-            Person person1;
 
             while (scanner.hasNext()) {
                 String[] personData = scanner.nextLine().split(" ");
-                age = Integer.parseInt(personData[1]);
+                int age = Integer.parseInt(personData[1]);
 
                 if (age > 0) {
-                    person1 = new Person(personData[0], age);
-                    personList.add(person1);
+                    personList.add(new Person(personData[0], age));
+
                 } else {
                     throw new IOException();
                 }

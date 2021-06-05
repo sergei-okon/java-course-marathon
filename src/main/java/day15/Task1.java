@@ -1,10 +1,7 @@
 package day15;
 
-import day14.Task3.Person;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +19,7 @@ public class Task1 {
         try {
             Scanner scanner = new Scanner(file);
             List<Shoes> shoeList = new ArrayList<>();
-            Shoes shoes;
+
             File file1 = new File("shoesList");
             PrintWriter printWriter = new PrintWriter(file1);
 
@@ -31,8 +28,7 @@ public class Task1 {
                 int stockBalance = Integer.parseInt(split[2]);
 
                 if (stockBalance == 0) {
-                    shoes = new Shoes(split[0], Integer.parseInt(split[1]), stockBalance);
-                    shoeList.add(shoes);
+                    shoeList.add(new Shoes(split[0], Integer.parseInt(split[1]), stockBalance));
                 }
             }
             System.out.println(shoeList);
